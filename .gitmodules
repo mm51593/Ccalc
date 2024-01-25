@@ -1,0 +1,3 @@
+[submodule "libs/machine"]
+	path = libs/machine
+	url = git@github.com:mm51593/StateMachine.git
