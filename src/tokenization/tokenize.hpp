@@ -1,8 +1,10 @@
 #pragma once
 
+#include <memory>
 #include <string>
 #include <vector>
 
+#include "tokenization/token/token.hpp"
 #include "tokenize/tokenize_whitespace.hpp"
 #include "tokenize/tokenize_numeric.hpp"
 #include "tokenize/tokenize_operator.hpp"
@@ -15,6 +17,6 @@ Tokenizer *const opTokenizer = new OperatorTokenizer();
 Tokenizer *const kwTokenizer = new KeywordTokenizer();
 Tokenizer *const idTokenizer = new IdentifierTokenizer();
 
-const Tokenizer *const tokenizers[] = {opTokenizer, numTokenizer, opTokenizer, kwTokenizer, idTokenizer};
+const Tokenizer *const tokenizers[] = {wsTokenizer, numTokenizer, opTokenizer, kwTokenizer, idTokenizer};
 
-void tokenize_line(std::string &line, std::vector<Token*> &buffer);
+void tokenize_line(std::string &line, std::vector<std::unique_ptr<Token>> &buffer);

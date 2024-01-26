@@ -1,19 +1,15 @@
 #pragma once
-#include "token.hpp"
 #include <string>
+
+#include "token.hpp"
 
 class IdentifierToken : public Token
 {
-    private:
+  private:
     std::string name;
 
-    public:
-    IdentifierToken(std::string name) : Token(Identifier), name(name)
-    {
-    }
+  public:
+    IdentifierToken(std::string name) : Token(Identifier), name(name) {}
 
-    std::string *get_name()
-    {
-        return &this->name;
-    }
+    std::string *get_name() { return &this->name; }
 };

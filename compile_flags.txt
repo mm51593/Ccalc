@@ -1,1 +1,4 @@
 -Isrc
+-Ilibs/machine
+-Ilibs/machine/include
+-std=c++20

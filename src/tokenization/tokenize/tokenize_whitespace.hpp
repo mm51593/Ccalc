@@ -7,13 +7,14 @@
 
 class WhitespaceToken : public Token
 {
-   public:
+  public:
     WhitespaceToken() : Token(Whitespace) {}
 };
 
 class WhitespaceTokenizer : public Tokenizer
 {
-   public:
-    std::optional<std::unique_ptr<Token>> try_tokenize(std::string::iterator iter,
-                                        int &chars_read) const override;
+  public:
+    std::optional<std::unique_ptr<Token>> try_tokenize(
+        std::string::iterator iter, int &chars_read) const override;
+    WhitespaceTokenizer();
 };
