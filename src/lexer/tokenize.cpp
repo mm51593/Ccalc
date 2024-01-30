@@ -4,7 +4,7 @@
 #include <memory>
 #include <vector>
 
-#include "tokenization/token/token.hpp"
+#include "lexer/token/token.hpp"
 
 void tokenize_line(std::string &line,
                    std::vector<std::unique_ptr<Token>> &buffer)

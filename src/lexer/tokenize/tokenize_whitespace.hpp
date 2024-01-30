@@ -2,8 +2,8 @@
 #include <optional>
 #include <string>
 
-#include "tokenization/token/token.hpp"
-#include "tokenization/tokenize/tokenizer.hpp"
+#include "lexer/token/token.hpp"
+#include "lexer/tokenize/tokenizer.hpp"
 
 class WhitespaceToken : public Token
 {

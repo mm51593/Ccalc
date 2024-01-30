@@ -1,7 +1,7 @@
 #include <memory>
 #include <optional>
 
-#include "tokenization/token/token.hpp"
+#include "lexer/token/token.hpp"
 #include "tokenizer.hpp"
 
 class IdentifierTokenizer : public Tokenizer

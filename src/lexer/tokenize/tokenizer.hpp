@@ -4,7 +4,7 @@
 #include <string>
 
 #include "state.hpp"
-#include "tokenization/token/token.hpp"
+#include "lexer/token/token.hpp"
 
 class Tokenizer
 {

@@ -1,7 +1,7 @@
 #include <memory>
 #include <optional>
 
-#include "tokenization/token/token_operator.hpp"
+#include "lexer/token/token_operator.hpp"
 #include "tokenizer.hpp"
 
 class OperatorTokenizer : public Tokenizer

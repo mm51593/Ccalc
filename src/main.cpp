@@ -3,8 +3,8 @@
 #include <string>
 #include <vector>
 
-#include "tokenization/token/token.hpp"
-#include "tokenization/tokenize.hpp"
+#include "lexer/token/token.hpp"
+#include "lexer/tokenize.hpp"
 
 int main(void)
 {

@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#include "tokenization/token/token.hpp"
+#include "lexer/token/token.hpp"
 #include "tokenize/tokenize_whitespace.hpp"
 #include "tokenize/tokenize_numeric.hpp"
 #include "tokenize/tokenize_operator.hpp"

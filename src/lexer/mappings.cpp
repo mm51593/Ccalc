@@ -1,5 +1,5 @@
-#include "tokenization/token/token_keyword.hpp"
-#include "tokenization/token/token_operator.hpp"
+#include "lexer/token/token_keyword.hpp"
+#include "lexer/token/token_operator.hpp"
 
 const std::map<std::string, KeywordToken::KeywordType> KeywordToken::kw_mapping = {
     {"if", If},

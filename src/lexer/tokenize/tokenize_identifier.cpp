@@ -7,7 +7,7 @@
 
 #include "machine.hpp"
 #include "state.hpp"
-#include "tokenization/token/token_identifier.hpp"
+#include "lexer/token/token_identifier.hpp"
 
 IdentifierTokenizer::IdentifierTokenizer()
 {

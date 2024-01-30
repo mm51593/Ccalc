@@ -7,7 +7,7 @@
 
 #include "machine.hpp"
 #include "state.hpp"
-#include "tokenization/token/token_numeric.hpp"
+#include "lexer/token/token_numeric.hpp"
 
 NumericTokenizer::NumericTokenizer()
 {
