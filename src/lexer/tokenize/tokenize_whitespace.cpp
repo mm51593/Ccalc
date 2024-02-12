@@ -5,11 +5,12 @@
 #include <optional>
 
 #include "machine.hpp"
+#include "src/dsm/dfa/dfa_state.hpp"
 #include "state.hpp"
 
 WhitespaceTokenizer::WhitespaceTokenizer()
 {
-    auto initial = std::make_shared<State<char>>();
+    auto initial = std::make_shared<DFAState<char>>();
 
     initial->add_transition([](char t) { return isspace(t); }, initial);
 
@@ -29,7 +30,7 @@ std::optional<std::unique_ptr<Token>> WhitespaceTokenizer::try_tokenize(
             chars_read++;
             loops++;
         }
-    } while(machine.is_valid());
+    } while (machine.is_valid());
 
     if (loops) {
         return std::make_unique<WhitespaceToken>();

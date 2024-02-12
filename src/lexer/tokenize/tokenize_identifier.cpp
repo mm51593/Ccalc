@@ -6,14 +6,15 @@
 #include <string>
 
 #include "machine.hpp"
+#include "src/dsm/dfa/dfa_state.hpp"
 #include "state.hpp"
 #include "lexer/token/token_identifier.hpp"
 
 IdentifierTokenizer::IdentifierTokenizer()
 {
-    auto empty = std::make_shared<State<char>>();
-    auto underscore_start = std::make_shared<State<char>>();
-    auto other = std::make_shared<State<char>>();
+    auto empty = std::make_shared<DFAState<char>>();
+    auto underscore_start = std::make_shared<DFAState<char>>();
+    auto other = std::make_shared<DFAState<char>>();
 
     empty->add_transition([](char t) { return isalpha(t); }, other);
     empty->add_transition([](char t) { return t == '_'; }, underscore_start);

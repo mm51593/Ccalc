@@ -1,5 +1,5 @@
 MAIN := main
-SRCFILES := $(shell find . -type f -name "*.cpp")
+SRCFILES := $(shell find . -type f -name "*.cpp" | grep -v tests/)
 OBJFILES := $(patsubst %.cpp, %.o, $(SRCFILES))
 COMPILE_FLAGS_FILE := compile_flags.txt
 

@@ -3,12 +3,13 @@
 #include <optional>
 #include <string>
 
+#include "src/dsm/dfa/dfa_state.hpp"
 #include "state.hpp"
 #include "lexer/token/token.hpp"
 
 class Tokenizer
 {
-    typedef std::shared_ptr<State<char>> StateMachine;
+    typedef std::shared_ptr<DFAState<char>> StateMachine;
 
   protected:
     StateMachine initial_state;

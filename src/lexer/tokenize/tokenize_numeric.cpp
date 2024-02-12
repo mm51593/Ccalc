@@ -1,18 +1,18 @@
 #include "tokenize_numeric.hpp"
 
 #include <cctype>
-#include <iostream>
 #include <memory>
 #include <optional>
 
 #include "machine.hpp"
+#include "src/dsm/dfa/dfa_state.hpp"
 #include "state.hpp"
 #include "lexer/token/token_numeric.hpp"
 
 NumericTokenizer::NumericTokenizer()
 {
-    auto whole = std::make_shared<State<char>>();
-    auto decimal = std::make_shared<State<char>>();
+    auto whole = std::make_shared<DFAState<char>>();
+    auto decimal = std::make_shared<DFAState<char>>();
 
     whole->add_transition([](char t) { return isdigit(t); }, whole);
     whole->add_transition([](char t) { return t == '.'; }, decimal);

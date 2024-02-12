@@ -5,10 +5,11 @@
 #include <optional>
 
 #include "machine.hpp"
+#include "src/dsm/dfa/dfa_state.hpp"
 
 KeywordTokenizer::KeywordTokenizer()
 {
-    auto initial = std::make_shared<State<char>>();
+    auto initial = std::make_shared<DFAState<char>>();
 
     initial->add_transition([](char t) { return isalpha(t); }, initial);
 
